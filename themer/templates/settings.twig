@@ -1,0 +1,22 @@
+{% import "_includes/forms" as forms %}
+
+<div class="options">
+   {{ forms.colorField({ label:'Header Colour',     id:"header",     name:"header",     value:settings.header }) }}
+   {{ forms.colorField({ label:'Background Colour', id:"background", name:"background", value:settings.background }) }}
+   {{ forms.colorField({ label:'Buttons Colour',    id:"buttons",    name:"buttons",    value:settings.buttons }) }}
+   {{ forms.colorField({ label:'Headings Colour',   id:"eadings",    name:"eadings",    value:settings.headings }) }}
+   {{ forms.colorField({ label:'Links Colour',      id:"links",      name:"links",      value:settings.links }) }}
+   {{ forms.colorField({ label:'Sidebar Colour',    id:"sidebar",    name:"sidebar",    value:settings.sidebar }) }}
+   {{ forms.colorField({ label:'Pane Colour',       id:"pane",       name:"pane",       value:settings.pane }) }}
+   {{ forms.colorField({ label:'Switch Colour',     id:"switch",     name:"switch",     value:settings.switch }) }}
+   {{ forms.colorField({ label:'Text Colour',       id:"text",       name:"text",       value:settings.text }) }}
+   {{ forms.colorField({ label:'Help Colour',       id:"help",       name:"help",       value:settings.help }) }}
+   {{ forms.colorField({ label:'Small Colour',      id:"small",      name:"small",      value:settings.small }) }}
+</div>
+
+{% set css %}
+  .options {}
+  .options > .field {  }
+{% endset %}
+
+{% includeCss css %}
