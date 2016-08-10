@@ -10,6 +10,14 @@ class ThemerPlugin extends BasePlugin {
     return '0.1';
   }
 
+  public function getSchemaVersion() {
+    return '0.1';
+  }
+
+  public function getDescription() {
+    return 'Customise the colour and style aesthetics of the Craft CMS.';
+  }
+
   public function getDeveloper() {
     return 'Yello Studio';
   }

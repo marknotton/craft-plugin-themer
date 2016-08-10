@@ -1,5 +1,5 @@
 # Themer *for Craft CMS*
-Customise the colour preferences of the clientside aesthetics of the CMS.
+Customise the colour and style aesthetics of the Craft CMS.
 
 ## TODO:
 - Add better colour picker
