@@ -36,12 +36,12 @@ class ThemerPlugin extends BasePlugin {
 
   protected function defineSettings() {
     return array(
-      'header'     => array(AttributeType::String, 'default' => '#333F4D'),
-      'background' => array(AttributeType::String, 'default' => '#FFFFFF'),
+      'header'     => array(AttributeType::String, 'default' => '#333f4d'),
+      'background' => array(AttributeType::String, 'default' => '#ebedef'),
       'buttons'    => array(AttributeType::String, 'default' => '#DA5A47'),
       'headings'   => array(AttributeType::String, 'default' => '#DA5A47'),
       'links'      => array(AttributeType::String, 'default' => '#0d78f2'),
-      'sidebar'    => array(AttributeType::String, 'default' => '#737F8C'),
+      'sidebar'    => array(AttributeType::String, 'default' => '#333f4d'),
       'pane'       => array(AttributeType::String, 'default' => '#F4F5F6'),
       'switch'     => array(AttributeType::String, 'default' => '#00B007'),
       'text'       => array(AttributeType::String, 'default' => '#29323d'),
