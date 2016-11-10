@@ -8,3 +8,4 @@ Brand up your Craft CMS with colour themes.
 - Fix the default options option, so it updates the styles on the page
 - Add option to include image background
 - Add a collection premade themes
+- Add more options as to what can be themed.
