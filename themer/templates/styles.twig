@@ -2,12 +2,19 @@
 #global-sidebar { background-color:{{ settings.sidebar }} }
 
 body, html {
-  background-color:{{ settings.background }}
+  background-color:{{ settings.background }};
+}
+
+body {
   color:{{settings.text}}
 }
 
+#page-title h1 {
+  color:{{settings.headings}};
+}
+
 .pane {
-  background-color:{{ settings.pane }}
+  background-color:{{ settings.pane }};
 }
 
 /* LOGIN */

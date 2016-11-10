@@ -42,7 +42,7 @@ class ThemerPlugin extends BasePlugin {
       'headings'   => array(AttributeType::String, 'default' => '#DA5A47'),
       'links'      => array(AttributeType::String, 'default' => '#0d78f2'),
       'sidebar'    => array(AttributeType::String, 'default' => '#333f4d'),
-      'pane'       => array(AttributeType::String, 'default' => '#F4F5F6'),
+      'pane'       => array(AttributeType::String, 'default' => '#FFFFFF'),
       'switch'     => array(AttributeType::String, 'default' => '#00B007'),
       'text'       => array(AttributeType::String, 'default' => '#29323d'),
       'help'       => array(AttributeType::String, 'default' => '#9d2dcc'),

@@ -50,13 +50,16 @@
   $( ".reset" ).on('click', function(event) {
     event.preventDefault();
     $( ".jscolor" ).each(function() {
-      var $this = $(this);
-      $this.val($this.data('default'));
-      $this.trigger( "change" );
+      var $this = $(this),
+          item = $this.data('id'),
+          colour = $this.data('default');
+      $this.val(colour);
+      $this.css('background-color','#'+colour);
+      $('#settings-'+item).val('#'+colour);
     });
   });
 
-  $( ".jscolor" ).on(function(event) {
+  $( ".jscolor" ).on('change', function(event) {
     var $this = $(this),
         item = $this.data('id'),
         colour = $this.val();
