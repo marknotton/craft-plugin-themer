@@ -59,7 +59,7 @@ class ThemerPlugin extends BasePlugin {
   public function init() {
     if ( craft()->request->isCpRequest())  {
 
-      return craft()->templates->render('themer/css', array(
+      return craft()->templates->render('themer/styles', array(
         'settings' => $this->getSettings()
       ));
 

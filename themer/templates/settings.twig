@@ -1,22 +1,119 @@
 {% import "_includes/forms" as forms %}
 
 <div class="options">
-   {{ forms.colorField({ label:'Header Colour',     id:"header",     name:"header",     value:settings.header }) }}
-   {{ forms.colorField({ label:'Background Colour', id:"background", name:"background", value:settings.background }) }}
-   {{ forms.colorField({ label:'Buttons Colour',    id:"buttons",    name:"buttons",    value:settings.buttons }) }}
-   {{ forms.colorField({ label:'Headings Colour',   id:"eadings",    name:"eadings",    value:settings.headings }) }}
-   {{ forms.colorField({ label:'Links Colour',      id:"links",      name:"links",      value:settings.links }) }}
-   {{ forms.colorField({ label:'Sidebar Colour',    id:"sidebar",    name:"sidebar",    value:settings.sidebar }) }}
-   {{ forms.colorField({ label:'Pane Colour',       id:"pane",       name:"pane",       value:settings.pane }) }}
-   {{ forms.colorField({ label:'Switch Colour',     id:"switch",     name:"switch",     value:settings.switch }) }}
-   {{ forms.colorField({ label:'Text Colour',       id:"text",       name:"text",       value:settings.text }) }}
-   {{ forms.colorField({ label:'Help Colour',       id:"help",       name:"help",       value:settings.help }) }}
-   {{ forms.colorField({ label:'Small Colour',      id:"small",      name:"small",      value:settings.small }) }}
+   {{ forms.hidden({ id:"header",     name:"header",     value:settings.header }) }}
+   {{ forms.hidden({ id:"background", name:"background", value:settings.background }) }}
+   {{ forms.hidden({ id:"buttons",    name:"buttons",    value:settings.buttons }) }}
+   {{ forms.hidden({ id:"eadings",    name:"eadings",    value:settings.headings }) }}
+   {{ forms.hidden({ id:"links",      name:"links",      value:settings.links }) }}
+   {{ forms.hidden({ id:"sidebar",    name:"sidebar",    value:settings.sidebar }) }}
+   {{ forms.hidden({ id:"pane",       name:"pane",       value:settings.pane }) }}
+   {{ forms.hidden({ id:"switch",     name:"switch",     value:settings.switch }) }}
+   {{ forms.hidden({ id:"text",       name:"text",       value:settings.text }) }}
+   {{ forms.hidden({ id:"help",       name:"help",       value:settings.help }) }}
+   {{ forms.hidden({ id:"small",      name:"small",      value:settings.small }) }}
 </div>
 
+<h2>Set your colour preferences</h2>
+
+<div class="colours">
+
+  <div>
+    <input class="jscolor" name="header-colour" data-id="header" data-default="#333f4d" value="{{ settings.header }}">
+    <label for="header-colour">Header</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="background-colour" data-id="background" data-default="ebedef" value="{{ settings.background }}">
+    <label for="background-colour">Background</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="buttons-colour" data-id="buttons" data-default="DA5A47" value="{{ settings.buttons }}">
+    <label for="buttons-colour">Buttons</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="headings-colour" data-id="headings" data-default="DA5A47" value="{{ settings.headings }}">
+    <label for="headings-colour">Headings</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="links-colour" data-id="links" data-default="0d78f2" value="{{ settings.links }}">
+    <label for="links-colour">Links</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="sidebar-colour" data-id="sidebar" data-default="333f4d" value="{{ settings.sidebar }}">
+    <label for="sidebar-colour">Sidebar</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="pane-colour" data-id="pane" data-default="F4F5F6" value="{{ settings.pane }}">
+    <label for="pane-colour">Pane</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="switch-colour" data-id="switch" data-default="00B007" value="{{ settings.switch }}">
+    <label for="switch-colour">Switch</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="text-colour" data-id="text" data-default="29323d" value="{{ settings.text }}">
+    <label for="text-colour">Text</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="help-colour" data-id="help" data-default="9d2dcc" value="{{ settings.help }}">
+    <label for="help-colour">Help</label>
+  </div>
+
+  <div>
+    <input class="jscolor" name="small-colour" data-id="small" data-default="000000" value="{{ settings.small }}">
+    <label for="small-colour">Small</label>
+  </div>
+
+</div>
+
+<button class='reset btn submit'>Reset to default colours</button>
+
+{# {{ forms.elementSelectField({
+    label: 'Login Background Image'|t,
+    instructions: 'Select a background image that will be used on the login page.'|t,
+    id: 'entry',
+    name: 'entry',
+    elementType: craft.elements.getElementType("Asset"),
+    source: '',
+    criteria: '',
+    sourceElementId: '',
+    elements: '',
+    storageKey: '',
+    viewMode: 'thumb',
+    limit: 1
+ }) }} #}
+
+
 {% set css %}
-  .options {}
-  .options > .field {  }
+  * {
+    -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  input.jscolor { width:100px; height:100px; border:rgba(0,0,0,0.2) 1px solid; display:block; position:relative;  text-align:center; font-weight:bold; font-size:20px; }
+  input.jscolor:focus, button.reset:focus { outline: none; }
+  input.jscolor + label { color:inherit; position:relative; display:block; padding: 5px 0; width:100%; top:100%; text-align:center; font-weight:bold; font-size:16px; }
+
+  div.colours > div { position:relative; float:left; margin-bottom:20px; margin-right:10px; }
+  div.colours:after { content:""; display:table; clear:both; }
+
+  button.reset { clear:both; display:table; margin-top:20px;}
+
 {% endset %}
 
 {% includeCss css %}
+
+{% includeJsFile resourceUrl('themer/jscolor.min.js') %}
+{% includeJsFile resourceUrl('themer/themer.js') %}

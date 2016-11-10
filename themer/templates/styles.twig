@@ -1,0 +1,33 @@
+{% set css %}
+#global-sidebar { background-color:{{ settings.sidebar }} }
+
+body, html {
+  background-color:{{ settings.background }}
+  color:{{settings.text}}
+}
+
+.pane {
+  background-color:{{ settings.pane }}
+}
+
+/* LOGIN */
+body.login {
+  /*background:linear-gradient(col(white, 0.80), col(white, 0.80)), image-url($craft-backround-image);*/
+  background-color: {{settings.background}};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*#login-form { background:image-url($craft-logo) no-repeat center 0; background-size:100% auto; padding-top:$craft-logo-height;
+    #ssl-icon { top:7px; }
+    label, #forgot-password { font-size:12px; }
+  }*/ }
+  body.login #forgot-password {
+    color: {{ settings.text }};
+    transition:  color 0.2s ease-in-out ; }
+    body.login #forgot-password:hover {
+      color: {{settings.links}}; }
+  body.login .btn.disabled {
+    display: block; }
+
+{% endset %}
+{% includeCss css %}
